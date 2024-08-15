@@ -1,0 +1,57 @@
+body, html{
+    margin: 0;
+    height: 100%;
+}
+
+.leftbar {
+    background-color: #f8f9fa;
+}
+
+.leftbar .list-group-item {
+    cursor: pointer;
+}
+
+.list-group-item.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.ad{
+    background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/0fdd0e25559501.56347a238b44b.png);
+    background-position: 30% 45%;
+}
+
+/* TEMPORARY STYLES */
+
+/* .email-list .btn-group {
+    width: 100%;
+} */
+
+.email-list .list-group-item {
+    cursor: pointer;
+}
+
+/* Email Content Styles */
+.email-content {
+    background-color: #f1f1f1;
+    border-left: 1px solid #ddd;
+}
+
+.email-content h4 {
+    margin-top: 0;
+} 
+
+.input-group{
+    padding-bottom: 2vh;
+}
+
+.logo{
+    text-align: center;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 30px;
+}
+
+.list-group{
+    margin-top: 7vh;
+}
