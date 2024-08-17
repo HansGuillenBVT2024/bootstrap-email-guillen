@@ -3,11 +3,11 @@ body, html{
     height: 100%;
 }
 
-.leftbar {
+.left-bar {
     background-color: #f8f9fa;
 }
 
-.leftbar .list-group-item {
+.left-bar .list-group-item {
     cursor: pointer;
 }
 
@@ -22,13 +22,7 @@ body, html{
     background-position: 30% 45%;
 }
 
-/* TEMPORARY STYLES */
-
-/* .email-list .btn-group {
-    width: 100%;
-} */
-
-.email-list .list-group-item {
+.email-list .list-group-item{
     cursor: pointer;
 }
 
@@ -54,4 +48,19 @@ body, html{
 
 .list-group{
     margin-top: 7vh;
+}
+
+
+.dropdown-menu{
+    animation: 0.7s expand;
+}
+@keyframes expand{
+    from{
+        z-index: -1;
+        transform: translateY(-10%);
+    }
+    to{
+        z-index: -1;
+        transform: translateY(-19%);
+    }
 }
