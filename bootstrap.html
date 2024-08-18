@@ -30,7 +30,7 @@
         <div class="col-lg-9 bg-dark">
             <div class="row">
                 <!-- ADS Section -->
-                <div class="col-lg-9 col-md-9 p-5 ad">
+                <div class="col-lg-9 col-md-9 d-sm-none d-md-block p-5 ad">
                     <!-- ADS goes here -->
                 </div>
 
@@ -41,9 +41,32 @@
                      <br>
                      (Now with ads!!!)
                 </div>
+                <div class="d-none d-sm-block d-md-none sandwich">
+                    <div class="collapse" id="navbarToggleExternalContent">
+                      <div class="bg-dark p-4">
+                        <div class="input-group">
+                            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                            <button type="button" class="btn btn-outline-primary" data-mdb-ripple-init>search</button>
+                          </div>
+                        <div class="d-grid input-group">
+                            <button type="button" class="btn btn-primary">Compose</button>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item">Email 1</li>
+                            <li class="list-group-item active">Email 2 (Selected)</li>
+                            <li class="list-group-item">Email 3</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <nav class="navbar navbar-dark bg-dark">
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                    </nav>
+                  </div>
             </div>
             <div class="row header-row">
-                <div class="col-lg-3 col-md-4 bg-white vh-100 p-3 email-list">
+                <div class="col-lg-3 col-md-4 d-sm-none d-md-block bg-white vh-100 p-3 email-list">
                     <!-- Additional content can be added here, like the email body or other sections -->
                     <!-- Email List Column -->
                     <div class="input-group">
@@ -59,7 +82,7 @@
                         <li class="list-group-item">Email 3</li>
                     </ul>
                 </div>
-                <div class="col-lg-7 col-md-6 bg-light vh-100 p-3 email-content">
+                <div class="col-lg-7 col-md-6 col-sm-10 bg-light vh-100 p-3 email-content">
                     <h4>Email Subject</h4>
                     <p>From: sender@example.com</p>
                     <p>To: you@example.com</p>
@@ -67,13 +90,13 @@
                     <p>This is the body of the selected email. It contains the email message content.</p>
                     <textarea class="form-control mt-3" rows="5" placeholder="Reply to this email..."></textarea>
                 </div>
-                <div class="col-lg-2 col-md-2 bg-light p-3">
+                <div class="col-lg-2 col-md-2 col-sm-2 bg-light p-3">
                     <button type="button" class="btn btn-primary">Reply</button>
                 </div>
-                <div class = "d-none d-md-block d-lg-none fixed-bottom">
+                <div class = "d-none d-md-block d-sm-block d-lg-none fixed-bottom">
                     <!-- Default dropup button -->
                     <div class="btn-group dropup">
-                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" aria-haspopup="true" data-bs-toggle="dropdown" aria-expanded="false">
                         +
                         </button>
                         <div class="dropdown-menu">
@@ -85,6 +108,9 @@
                             <button class="dropdown-item" type="button">Drafts</button>
                             <button class="dropdown-item" type="button">Trash</button>
                         </div>
+                    </div>
+                    <div class="col-sm-12 d-md-none d-sm-block p-5 ad">
+                        <!-- ADS goes here -->
                     </div>
                 </div>
             </div>
