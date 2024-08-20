@@ -12,38 +12,47 @@
 
 <div class="container-fluid">
     <div class="row header-row">
-        <!-- Left Column -->
-        <div class="col-lg-3 d-none d-lg-block bg-light vh-100 p-3 left-bar">
-            <!-- Content for the left column -->
+        <!-- Left Column: Holds Folder Tab With Sections and Profile and Settings Buttons-->
+        <div class="col-lg-3 d-none d-lg-block bg-dark bg-gradient vh-100 p-3 left-bar">
+            <!-- Content for the left column 
+                Uses two buttons and a list of tabs that act clickable 
+            -->
             <button type="button" class="btn btn-primary">Profile</button>
             <button type="button" class="btn btn-primary">Settings</button>
-            <ul class="list-group">
+            <ul class="text-light list-group">
                 <h3>Folders</h3>
-                <li class="list-group-item active">Inbox</li>
-                <li class="list-group-item">Sent</li>
-                <li class="list-group-item">Drafts</li>
-                <li class="list-group-item">Trash</li>
+                <li class="bg-dark text-light list-group-item active">Inbox</li>
+                <li class="bg-dark text-light list-group-item">Sent</li>
+                <li class="bg-dark text-light list-group-item">Drafts</li>
+                <li class="bg-dark text-light list-group-item">Trash</li>
             </ul>
         </div>
 
-        <!-- Main Content -->
-        <div class="col-lg-9 bg-dark">
+        <!-- Rest of the Website -->
+        <!-- 
+            Header tab for advertisement and email logo
+        -->
+        <div class="col-lg-9 bg-dark bg-gradient">
             <div class="row">
                 <!-- ADS Section -->
                 <div class="col-lg-9 col-md-9 d-sm-none d-md-block p-5 ad">
-                    <!-- ADS goes here -->
+                    <!-- leave empty as the ad is a background -->
                 </div>
 
                 <!-- LOGO Section -->
-                <div class="col-lg-3 col-md-3 bg-light logo">
-                    <!-- LOGO go here -->
+                <div class="col-lg-3 col-md-3 text-light logo">
                      EMAIL
                      <br>
                      (Now with ads!!!)
                 </div>
-                <div class="d-none d-sm-block d-md-none sandwich">
+
+                <!-- 
+                    Collapsable sandwich button shown only when the screen size is set to small
+                -->
+                <div class="d-none d-sm-block d-md-none bg-gray sandwich">
                     <div class="collapse" id="navbarToggleExternalContent">
-                      <div class="bg-dark p-4">
+                      <div class="bg-gray p-4">
+                        <!-- Search and Compose button -->
                         <div class="input-group">
                             <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
                             <button type="button" class="btn btn-outline-primary" data-mdb-ripple-init>search</button>
@@ -51,24 +60,29 @@
                         <div class="d-grid input-group">
                             <button type="button" class="btn btn-primary">Compose</button>
                         </div>
-                        <ul class="list-group">
-                            <li class="list-group-item">Email 1</li>
-                            <li class="list-group-item active">Email 2 (Selected)</li>
-                            <li class="list-group-item">Email 3</li>
+                        <!-- List of emails available to view -->
+                        <ul class="list-group email-list">
+                            <li class="bg-dark text-light list-group-item">Spotify - Wanna Break from the Ads?</li>
+                            <li class="bg-dark text-light list-group-item active">How to Make an Email Website</li>
+                            <li class="bg-dark text-light list-group-item">TOP SECRET - DO NOT OPEN THIS EMAIL</li>
                         </ul>
                       </div>
                     </div>
-                    <nav class="navbar navbar-dark bg-dark">
+                    <!-- Code for navbar icon and animation can be found in the bootstrap documentation
+                     Note that data-target has been changed to data-bs-target to work with Bootstrap 5, same with other "data" attributes -->
+                    <nav class="navbar navbar-dark bg-gray">
                       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                       </button>
                     </nav>
-                  </div>
+                </div>
+
+
             </div>
             <div class="row header-row">
-                <div class="col-lg-3 col-md-4 d-sm-none d-md-block bg-white vh-100 p-3 email-list">
-                    <!-- Additional content can be added here, like the email body or other sections -->
-                    <!-- Email List Column -->
+                <!-- Email list and Search for Large and Medium Window Sizes -->
+                <div class="col-lg-3 col-md-4 d-sm-none d-md-block bg-gray vh-100 p-3 email-list">
+                    <!-- Search and Compose button -->
                     <div class="input-group">
                         <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
                         <button type="button" class="btn btn-outline-primary" data-mdb-ripple-init>search</button>
@@ -76,47 +90,52 @@
                     <div class="d-grid input-group">
                         <button type="button" class="btn btn-primary">Compose</button>
                     </div>
+                    <!-- List of emails available to view -->
                     <ul class="list-group">
-                        <li class="list-group-item">Email 1</li>
-                        <li class="list-group-item active">Email 2 (Selected)</li>
-                        <li class="list-group-item">Email 3</li>
+                        <li class="bg-dark text-light list-group-item">Spotify - Wanna Break from the Ads?</li>
+                        <li class="bg-dark text-light list-group-item active">How to Make an Email Website</li>
+                        <li class="bg-dark text-light list-group-item">TOP SECRET - DO NOT OPEN THIS EMAIL</li>
                     </ul>
                 </div>
-                <div class="col-lg-7 col-md-6 col-sm-10 bg-light vh-100 p-3 email-content">
-                    <h4>Email Subject</h4>
-                    <p>From: sender@example.com</p>
-                    <p>To: you@example.com</p>
+                <!-- Current viewing email section -->
+                <div class="col-lg-7 col-md-6 col-sm-10 bg-dark text-light vh-100 p-3 email-content">
+                    <h4>How to Make an Email Website</h4>
+                    <p>From: definitelynotarobot@email.com</p>
+                    <p>To: hans@email.com</p>
                     <hr>
-                    <p>This is the body of the selected email. It contains the email message content.</p>
+                    <p>Have you ever wondered how to make a responsive and engaging email site that can rival the likes of Gmail? Me too! Let me know when you figure it out.</p>
                     <textarea class="form-control mt-3" rows="5" placeholder="Reply to this email..."></textarea>
                 </div>
-                <div class="col-lg-2 col-md-2 col-sm-2 bg-light p-3">
+                <!-- Reply column -->
+                <div class="col-lg-2 col-md-2 col-sm-2 bg-dark p-3">
                     <button type="button" class="btn btn-primary">Reply</button>
                 </div>
+
+                <!-- Dropdown menu which only appears in medium and small window sizes -->
                 <div class = "d-none d-md-block d-sm-block d-lg-none fixed-bottom">
                     <!-- Default dropup button -->
                     <div class="btn-group dropup">
                         <button type="button" class="btn btn-secondary dropdown-toggle" aria-haspopup="true" data-bs-toggle="dropdown" aria-expanded="false">
                         +
                         </button>
-                        <div class="dropdown-menu">
+                        <div class="bg-dark dropdown-menu">
                         <!-- Dropdown menu links -->
-                            <button class="dropdown-item" type="button">Profile</button>
-                            <button class="dropdown-item" type="button">Settings</button>
-                            <button class="dropdown-item" type="button">Inbox</button>
-                            <button class="dropdown-item" type="button">Sent</button>
-                            <button class="dropdown-item" type="button">Drafts</button>
-                            <button class="dropdown-item" type="button">Trash</button>
+                            <button class="text-light dropdown-item" type="button">Profile</button>
+                            <button class="text-light dropdown-item" type="button">Settings</button>
+                            <button class="text-light dropdown-item" type="button">Inbox</button>
+                            <button class="text-light dropdown-item" type="button">Sent</button>
+                            <button class="text-light dropdown-item" type="button">Drafts</button>
+                            <button class="text-light dropdown-item" type="button">Trash</button>
                         </div>
                     </div>
+
+                    <!-- ADS section that only appears in small window size -->
                     <div class="col-sm-12 d-md-none d-sm-block p-5 ad">
-                        <!-- ADS goes here -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Email Content Column -->
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
